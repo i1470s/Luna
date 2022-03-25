@@ -1,0 +1,19 @@
+os:
+Windows (works w/ missing features)
+Windows WSL 
+Linux
+
+language:
+Python 3.0+
+Shell
+
+pip packages:
+urllib3
+python_nmap
+Flask
+requests
+
+extra software:
+Bluez
+Aircrack-ng
+Dsniff
