@@ -21,9 +21,6 @@ try:
 except Exception:  # noqa: S110
 	pass
 
-title = "Luna (x86)"
-ctypes.windll.kernel32.SetConsoleTitleA(title.encode())
-
 event = event()
 tools = tools()
 
