@@ -1,14 +1,7 @@
-# 2020
-# The Raven-Storm Toolkit was programmed and developed by Taguar258.
-# The Raven-Storm Toolkit is published under the MIT Licence.
-# The Raven-Storm Toolkit is based on the CLIF-Framework.
-# The CLIF-Framework is programmed and developed by Taguar258.
-# The CLIF-Framework is published under the MIT Licence.
-
 from os import chdir, path, system
 from random import choice
 from time import sleep
-import ctypes
+import colorama
 
 import requests
 from CLIF_Framework.framework import console  # noqa: I900
@@ -80,7 +73,7 @@ class Main:
 		banner_fire_color = var.C_Cyan
 		banner_middle_color = var.C_Violet
 		banner_bottom_color = var.C_Dark_Blue
-		banner_logo = ("""\x1b[35m
+		banner_logo = ("\x1b[1;35m" + """
  ___                          
 |   |    .--.--..-----..---.-.
 |.  |    |  |  ||     ||  _  |
@@ -92,7 +85,6 @@ class Main:
 \x1b[1;39mWelcome to Luna the mutifunction botnet from Ivry Ltd
 ---
 
-Stress-Testing-Toolkit by Taguar258 (c) | MIT 2020
 Based on the CLIF Framework by Taguar258 (c) | MIT 2020
 """)
 
@@ -343,15 +335,15 @@ Based on the CLIF Framework by Taguar258 (c) | MIT 2020
 	def upgrade():
 		try:
 			chdir("/tmp")
-			system("sudo git clone https://github.com/Taguar258/Raven-Storm.git")
-			chdir("/tmp/Raven-Storm/")
+			system("sudo git clone https://github.com/i1470s/Luna.git")
+			chdir("/tmp/Luna/")
 			system("sudo bash ./install_to_bin.sh")
-			print("[i] Deleting the temporary stored Raven-Storm...")
-			system("sudo rm -rf -i /tmp/Raven-Storm/")
+			print("[i] Deleting the temporary stored Luna...")
+			system("sudo rm -rf -i /tmp/Luna/")
 			var.stop()
 			quit()
 		except Exception:
-			print("Cound not upgrade Raven-Storm. (Make sure to use sudo)")
+			print("Cound not upgrade Luna. (Make sure to use sudo)")
 
 	@event.command
 	def clear():
@@ -367,5 +359,5 @@ Based on the CLIF Framework by Taguar258 (c) | MIT 2020
 
 
 def setup(console):
-	console.ps1 = "\x1b[35m[Luna]:\x1b[1;39m "
+	console.ps1 = "\x1b[1;35m" + "[Luna]:\x1b[1;39m "
 	console.add(Main(console), event)

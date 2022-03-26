@@ -1,10 +1,3 @@
-# 2020
-# The Raven-Storm Toolkit was programmed and developed by Taguar258.
-# The Raven-Storm Toolkit is published under the MIT Licence.
-# The Raven-Storm Toolkit is based on the CLIF-Framework.
-# The CLIF-Framework is programmed and developed by Taguar258.
-# The CLIF-Framework is published under the MIT Licence.
-
 import socket
 from os import getcwd, name, path, system
 from sys import version
@@ -81,7 +74,7 @@ class Main:
 
 	def banner(self):
 		system("clear || cls")
-		print(("""\x1b[35m
+		print(("\x1b[1;35m" + """
  ___                          
 |   |    .--.--..-----..---.-.
 |.  |    |  |  ||     ||  _  |
@@ -437,5 +430,5 @@ class Main:
 
 
 def setup(console):
-	console.ps1 = "L3> "
+	console.ps1 = "\x1b[1;35m" + "[Luna]:\x1b[1;39m "
 	console.add(Main(console), event)

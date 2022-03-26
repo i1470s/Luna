@@ -1,10 +1,3 @@
-# 2020
-# The Raven-Storm Toolkit was programmed and developed by Taguar258.
-# The Raven-Storm Toolkit is published under the MIT Licence.
-# The Raven-Storm Toolkit is based on the CLIF-Framework.
-# The CLIF-Framework is programmed and developed by Taguar258.
-# The CLIF-Framework is published under the MIT Licence.
-
 from os import system
 from time import sleep
 
@@ -51,7 +44,7 @@ class Main:
 		banner_fire_color = var.C_Cyan
 		banner_middle_color = var.C_Violet
 		banner_bottom_color = var.C_Dark_Blue
-		banner_logo = ("""\x1b[35m
+		banner_logo = ("\x1b[1;35m" + """
  ___                          
 |   |    .--.--..-----..---.-.
 |.  |    |  |  ||     ||  _  |
@@ -193,7 +186,7 @@ class Main:
 	@event.command
 	def run():
 		data = {"agreed": False, "commands": [""]}
-		app = flask.Flask("Raven-Storm-Server")
+		app = flask.Flask("Luna-Server")
 		# app.config["DEBUG"] = True
 
 		@app.route('/get/com<pos>', methods=["GET", "POST"])
@@ -243,5 +236,5 @@ class Main:
 
 
 def setup(console):
-	console.ps1 = "Server> "
+	console.ps1 = "\x1b[1;35m" + "[Luna]:\x1b[1;39m "
 	console.add(Main(console), event)
