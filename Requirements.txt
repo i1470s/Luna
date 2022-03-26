@@ -17,3 +17,4 @@ extra software:
 Bluez
 Aircrack-ng
 Dsniff
+Nmap
